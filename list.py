@@ -49,6 +49,25 @@ print("my_inventory: ", my_inventory)
 
 print("Length/Elements of new_inventory: ",len(new_inventory))
 
+# Matrix
+# list is one dimensional array
+# matrix is a (two or more than two dimensional) multidimensional array
+matrix = [
+    [1,4,3],
+    [2,5,6],
+    [7,8,9]
+]
+
+print("matrix is: ", matrix)
+print("matrix[0]: ", matrix[0]) # prints first row
+print("matrix[1]: ", matrix[1]) # prints second row
+print("matrix[2]: ", matrix[2]) # prints third row
+print("matrix[0]][0]: ", matrix[0][0])
+
+for i in range(0,3):
+    for j in range(0,3):
+        print("matrix[",i,"]","[",j,"]: ", matrix[i][j])
+
 # Methods on Lists
 
 basket = ["mango", "apple", "banana"]
@@ -100,3 +119,33 @@ print(basket.count("a"))
 num_list = [1, 2, 3, 4, 5, 1, 5, 6, 7, 8, 4, 4]
 print("num_list: ", num_list)
 print("Count of 4 in num_list: ", num_list.count(4))
+
+# sorting the list elements in ascending order
+print("basket: ", basket)
+print("sorted basket: ", sorted(basket)) # doesn't update the actual list
+print("basket: ", basket)
+
+new_basket = basket.copy()
+new_basket.sort()
+print("new_basket: ", new_basket)
+print("basket: ", basket)
+
+basket.sort()    # updates the actual list
+print("basket: ", basket)
+num_list.sort()    # updates the actual list
+print("num_list: ", num_list)
+
+# reversing the list, just changes the index of each elements
+basket.reverse()    # using methods
+print("reversed basket: ", basket)
+print("reversed basket: ", basket[::-1])     # using list slicing, but this creates a new list, doesn't update the actual list
+
+# create a list of number
+print(list(range(1,20)))
+print(list(range(20)))
+
+# join method   # can be used to combine list into a string
+sentence = '~'  # try this with '', ' ','@', '#', '~' etc
+new_sentence = sentence.join(['hi', 'my', 'friend'])   # create a new sentence
+print("sentence is: ", sentence)
+print("new_sentence is: ", new_sentence)
