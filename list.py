@@ -149,3 +149,30 @@ sentence = '~'  # try this with '', ' ','@', '#', '~' etc
 new_sentence = sentence.join(['hi', 'my', 'friend'])   # create a new sentence
 print("sentence is: ", sentence)
 print("new_sentence is: ", new_sentence)
+
+# list unpacking
+numbers = [1,2,3]
+print(numbers)
+a,b,c = 1,2,3
+print(a)
+print(b)
+print(c)
+
+a,b,c, *other = [1,2,3,4,5,6,7,8,9,0]
+print(a)
+print(b)
+print(c)
+print(other)
+
+
+a,b,c, *other,d = [1,2,3,4,5,6,7,8,9,0]
+print(a)
+print(b)
+print(c)
+print(other)
+print(d)
+
+# use of None
+
+attributes = None
+print(attributes)
