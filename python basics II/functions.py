@@ -23,13 +23,13 @@ def say_hello_self(name, country, self = 'Unknown'):                   # paramet
 say_hello_self('Roger', 'Canada', 'Maximus')
 say_hello_self('Roger', 'Canada')
 
-def sum(num1, num2):
+def sum_numbers(num1, num2):
     return num1+num2
 
-total = sum(50,20)
+total = sum_numbers(50,20)
 print(total)
-print(sum(20, total))
-print(sum(20, sum(30,10)))
+print(sum_numbers(20, total))
+print(sum_numbers(20, sum_numbers(30,10)))
 
 tree_pattern = [
   [0,0,0,1,0,0,0],
@@ -39,8 +39,33 @@ tree_pattern = [
   [0,0,0,1,0,0,0],
   [0,0,0,1,0,0,0]
 ]
+
+x_pattern = [
+  [1,0,0,0,0,0,1],
+  [0,1,0,0,0,1,0],
+  [0,0,1,0,1,0,0],
+  [0,0,0,1,0,0,0],
+  [0,0,1,0,1,0,0],
+  [0,1,0,0,0,1,0],
+  [1,0,0,0,0,0,1]
+]
+
+y_pattern = [
+  [1,0,0,0,0,0,1],
+  [0,1,0,0,0,1,0],
+  [0,0,1,0,1,0,0],
+  [0,0,0,1,0,0,0],
+  [0,0,0,1,0,0,0],
+  [0,0,0,1,0,0,0],
+  [0,0,0,1,0,0,0]
+]
 # function to display pixel image
-def display_pixel_image(pattern):           
+def display_pixel_image(pattern):
+    # docstring : hovering on the function will give you information about the function that is entered here
+    ''' Info: This function prints the pixel image pattern given as an argument.
+    The input argument must be an array of any size.
+    '''
+    # docstring end
     for row in pattern:
         for element in row:
             if (element):
@@ -50,3 +75,23 @@ def display_pixel_image(pattern):
         print('')
 
 display_pixel_image(tree_pattern)
+display_pixel_image(x_pattern)
+display_pixel_image(y_pattern)
+
+# display function info
+print(display_pixel_image.__doc__)
+
+# *args and **kwargs
+# *args is used when function is to be used for more than one arguments
+def super_func(*args, **kwargs):
+    print('printed as arguments', *args)
+    print('printed as sets', args)
+    print('printed as arguments', kwargs)
+    addition = sum(args)
+    total = 0
+    for items in kwargs.values():
+        total += items
+    return addition, total
+
+
+print(super_func(10,20,30,40,60,90, num1 = 5, num2 = 7))
