@@ -95,3 +95,19 @@ def super_func(*args, **kwargs):
 
 
 print(super_func(10,20,30,40,60,90, num1 = 5, num2 = 7))
+
+# Rule of order: parameters, *args, default parameters, **kwargs
+
+def another_super_func(name, *args, greet ='hi', **kwargs):
+    print('name is:', name)
+    print('greetings: ', greet)
+    print('printed as arguments', *args)
+    print('printed as sets', args)
+    print('printed as arguments', kwargs)
+    addition = sum(args)
+    total = 0
+    for items in kwargs.values():
+        total += items
+    return addition, total
+
+print(another_super_func('john',10,20,30,40,60,90, num1 = 5, num2 = 7))
