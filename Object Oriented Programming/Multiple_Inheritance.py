@@ -93,11 +93,16 @@ print(f'is archer1 is an instance of Wizard? : {isinstance(archer1, Wizard)}')
 print(f'is wizard1 is an instance of User? : {isinstance(wizard1, User)}')
 print(f'is archer1 is an instance of User? : {isinstance(archer1, User)}')
 print(f'is swardsman1 is an instance of User? : {isinstance(swardsman1, User)}')
+print(f'is hybridborg is an instance of User? : {isinstance(hybridborg, User)}')
+print(f'is hybridborg is an instance of Wizard? : {isinstance(hybridborg, Wizard)}')
+print(f'is hybridborg is an instance of Archer? : {isinstance(hybridborg, Archer)}')
+print(f'is hybridborg is an instance of Swardsman? : {isinstance(hybridborg, Swardsman)}')
 
 # check if an object is an instance of a base class
 print(f'is wizard1 is an instance of base class? : {isinstance(wizard1, object)}')
 print(f'is archer1 is an instance of base class? : {isinstance(archer1, object)}')
 print(f'is swardsman1 is an instance of base class? : {isinstance(swardsman1, object)}')
+print(f'is hybridborg is an instance of base class? : {isinstance(hybridborg, object)}')
 
 #  using method of archer with Hybrid object
 hybridborg.run()
