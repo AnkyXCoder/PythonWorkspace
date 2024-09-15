@@ -1,0 +1,6 @@
+whitelist:  # Add allowed words here
+  - precommit
+  - autopep8
+ignore-patterns:  # Ignore certain file types or patterns
+  - "^venv/"
+  - ".git/"

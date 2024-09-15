@@ -1,12 +1,14 @@
 # Create a class and constructors
 
+
 # Abstraction
 # create an object
 class PersonalCharacter:
     # global attribute
     _membership = True
+
     # constructor
-    def __init__(self, name = 'anonymous', age = 0, strength = 100): # dunder method
+    def __init__(self, name="anonymous", age=0, strength=100):  # dunder method
         """This is a constructor using __init__ which is called a duncder method.
         This constructor is called every time an object is created.
         It instantiates the object with the given attributes of the class.
@@ -14,11 +16,12 @@ class PersonalCharacter:
         # attributes
         """Protected members are those members of the class which cannot be accessed outside the class
         but can be accessed from within the class and it’s subclasses."""
-        self._name = name           # to make attribute protected
-        self._age = age             # to make attribute protected
+        self._name = name  # to make attribute protected
+        self._age = age  # to make attribute protected
         """Private members are similar to protected members, the difference is that the class members declared private
         should neither be accessed outside the class nor by any base class."""
         self.__strength = strength  # to make attribute private
+
 
 # instantiate
 person1 = PersonalCharacter("Andy", 25)
